@@ -1,0 +1,17 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-lock.yaml
+
+# Vite/Tailwind/Electron build output
+renderer/dist/
+dist/
+out/
+build/
+
+# OS/IDE
+.DS_Store
+*.log
+.vscode/

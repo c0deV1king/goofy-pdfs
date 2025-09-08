@@ -1,0 +1,30 @@
+{
+  "name": "goofy-pdfs",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Minimal Electron + React + Tailwind template",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "concurrently -k \"vite\" \"cross-env NODE_ENV=development electron .\"",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^9.2.1",
+    "cross-env": "^7.0.3",
+    "electron": "^28.3.3",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "vite": "^5.4.19"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "type": "commonjs"
+}
