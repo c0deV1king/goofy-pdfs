@@ -5,6 +5,9 @@ export default function App() {
     <div className="h-screen grid place-items-center bg-slate-900">
       <TopMenu />
       <div className="text-center">
+        <h1 className="text-sm text-white">
+          Import or drag-and-drop a pdf file to get started
+        </h1>
         <p className="opacity-80 mt-2 text-white text-xs absolute bottom-1 right-1">
           GoofyPDFs by c0dev1king
         </p>
