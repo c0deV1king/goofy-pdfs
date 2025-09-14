@@ -8,7 +8,10 @@ let mainWindow;
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 900,
-    height: 825,
+    height: 880,
+    minHeight: 880,
+    minWidth: 900,
+    title: "GoofyPDFs",
     autoHideMenuBar: true,
     webPreferences: {
       nodeIntegration: false,
@@ -18,6 +21,7 @@ function createWindow() {
 
   if (isDev) {
     mainWindow.loadURL("http://localhost:5173");
+    mainWindow.webContents.openDevTools({ mode: "detach" });
   } else {
     const indexHtml = path.join(
       __dirname,
