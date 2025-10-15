@@ -6,6 +6,9 @@ import checkboxIcon from "../assets/static/check2-square.svg";
 import textBoxIcon from "../assets/static/bounding-box-circles.svg";
 import { useRef } from "react";
 
+// NOTE: After adding functionality of the buttons,
+// change opacity back to 80 and cursor to pointer. This is for me.
+
 export default function TopMenu({ onPickFile, currentFileName }) {
   const fileInputRef = useRef(null);
 
@@ -24,7 +27,7 @@ export default function TopMenu({ onPickFile, currentFileName }) {
     <div className="w-full h-[5vh] absolute top-0 grid grid-cols-3 items-center z-10">
       <div className="h-full ml-2 flex items-center justify-self-start">
         <img
-          className="h-full p-1 opacity-80 hover:opacity-100 hover:cursor-pointer"
+          className="h-full p-1 opacity-25 hover:opacity-100 hover:cursor-not-allowed"
           src={saveIcon}
           alt="Save Icon"
         />
@@ -50,22 +53,22 @@ export default function TopMenu({ onPickFile, currentFileName }) {
       </div>
       <div className="h-full flex items-center justify-self-center">
         <img
-          className="h-full p-1 opacity-80 hover:opacity-100 hover:cursor-pointer"
+          className="h-full p-1 opacity-25 hover:opacity-100 hover:cursor-not-allowed"
           src={highlightIcon}
           alt="Highlight Icon"
         />
         <img
-          className="h-full p-1 opacity-80 hover:opacity-100 hover:cursor-pointer"
+          className="h-full p-1 opacity-25 hover:opacity-100 hover:cursor-not-allowed"
           src={underlineIcon}
           alt="Underline Icon"
         />
         <img
-          className="h-full p-1 opacity-80 hover:opacity-100 hover:cursor-pointer"
+          className="h-full p-1 opacity-25 hover:opacity-100 hover:cursor-not-allowed"
           src={checkboxIcon}
           alt="Checkbox Icon"
         />
         <img
-          className="h-full p-1 opacity-80 hover:opacity-100 hover:cursor-pointer"
+          className="h-full p-1 opacity-25 hover:opacity-100 hover:cursor-not-allowed"
           src={textBoxIcon}
           alt="Text Box Icon"
         />
