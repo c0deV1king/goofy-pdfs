@@ -66,7 +66,7 @@ export default function PDFCanvas() {
   return (
     <>
       <div className="absolute top-0 left-0 w-full h-full flex flex-col">
-        <div className="h-screen grid place-items-center bg-slate-900">
+        <div className="h-screen grid place-items-center bg-slate-800">
           <TopMenu onPickFile={handlePickedFile} currentFileName={file?.name} />
         </div>
         <div className="w-full h-full flex flex-col items-center">
@@ -80,6 +80,8 @@ export default function PDFCanvas() {
               onLoadSuccess={onDocumentLoadSuccess}
               onLoadError={onDocumentLoadError}
               loading={<p className="text-sm text-gray-500">Loading...</p>}
+              noData={null}
+              error={null}
             >
               <Page
                 pageNumber={pageNumber}
@@ -87,16 +89,6 @@ export default function PDFCanvas() {
                 renderAnnotationLayer={false}
               />
             </Document>
-
-            {Boolean(numPages) && pageNumber > 1 && (
-              <button
-                type="button"
-                onClick={previousPage}
-                className="absolute top-1/2 left-2 bg-slate-700 text-white px-2 py-1 rounded opacity-70 hover:opacity-100 disabled:opacity-30 disabled:cursor-not-allowed z-10"
-              >
-                Previous
-              </button>
-            )}
 
             {Boolean(numPages) && pageNumber > 1 && (
               <button
